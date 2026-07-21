@@ -1,6 +1,6 @@
 <div align="center">
 
-# Mivia-IWDD-500 Dataset
+# MIVIA-IWDD-500 DATASET
 
 ### A PUBLIC VIDEO BENCHMARK FOR AUTOMATED ILLEGAL WASTE DUMPING DETECTION AND TEMPORAL LOCALIZATION
 
@@ -15,39 +15,58 @@
 
 ---
 
-## Table of contents
+## TABLE OF CONTENTS
 
-- [Overview](#overview)
-- [Task definition](#task-definition)
-- [Dataset at a glance](#dataset-at-a-glance)
-- [Data collection and sample selection](#data-collection-and-sample-selection)
-- [Annotation methodology](#annotation-methodology)
-- [Citation](#citation)
-- [Authors](#authors)
+- [OVERVIEW](#overview)
+- [TASK DEFINITION](#task-definition)
+- [DATASET AT A GLANCE](#dataset-at-a-glance)
+- [DATA COLLECTION AND SAMPLE SELECTION](#data-collection-and-sample-selection)
+- [ANNOTATION METHODOLOGY](#annotation-methodology)
+- [CITATION](#citation)
+- [AUTHORS](#authors)
 
 ---
 
-## Overview
+## OVERVIEW
 
-Illegal Waste Dumping Detection (IWDD) concerns the automatic recognition of unlawful waste disposal in video streams. The problem is not reducible to the static recognition of garbage objects: a reliable system must interpret the **temporally evolving action** through which an object is abandoned and distinguish it from visually similar but legitimate activities. IWDD can therefore be viewed as a domain-specific video-anomaly and action-recognition problem.
+**Illegal Waste Dumping Detection (IWDD)** concerns the *automatic recognition of unlawful waste disposal in video streams*. The problem cannot be reduced to the static recognition of garbage objects: a reliable system must interpret the **temporally evolving action** through which an object is abandoned and distinguish it from visually similar but *legitimate activities*. IWDD can therefore be framed as a **domain-specific video-anomaly and action-recognition problem**. **Mivia-IWDD-500** was introduced to address the lack of a *publicly available benchmark* specifically designed for video-based IWDD. Existing resources have largely focused on static waste images, material classification, abandoned dumpsites, or private video collections, thereby limiting **reproducibility** and **standardized comparison**. Mivia-IWDD-500 provides a public benchmark characterized by a *balanced class distribution*, *heterogeneous surveillance conditions*, **event-onset annotations**, and an **official train/test protocol**.
 
-The dataset was introduced to address the lack of a publicly available benchmark specifically designed for video-based IWDD. Existing resources have largely focused on static waste images, material classification, abandoned dumpsites, or private video collections, limiting reproducibility and standardized comparison. Mivia-IWDD-500 provides a public benchmark with a balanced class distribution, heterogeneous surveillance conditions, event-onset annotations, and an official train/test protocol.
+## TASK DEFINITION
 
-## Task definition
+The benchmark distinguishes **two complementary disposal modalities**, defined according to the *spatial and temporal characteristics of the abandonment action*:
 
-The benchmark distinguishes two disposal modalities:
+<div align="center">
 
-| Modality | Definition | Representative examples | Main detection challenge |
-|---|---|---|---|
-| **Static disposal** | Intentional deposition of waste at a selected location. The action is generally spatially localized and temporally well defined. | Leaving garbage bags beside a collection point, abandoning furniture, unloading construction debris or bulky materials. | The evidence may unfold across multiple stages, such as approaching, placing the object, and walking away. |
-| **Dynamic disposal** | Brief and spontaneous disposal performed while the subject or vehicle is in motion. | Throwing waste from a moving vehicle, dropping litter while walking, releasing a small object in passing. | The event can occur within a fraction of a second and requires sensitivity to subtle temporal and motion cues. |
+<table>
+  <thead>
+    <tr>
+      <th align="center" width="16%">MODALITY</th>
+      <th align="center" width="28%">DEFINITION</th>
+      <th align="center" width="28%">REPRESENTATIVE EXAMPLES</th>
+      <th align="center" width="28%">MAIN DETECTION CHALLENGE</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td align="center"><strong>STATIC DISPOSAL</strong></td>
+      <td align="center">Intentional deposition of waste at a <em>selected location</em>. The action is generally <strong>spatially localized</strong> and <strong>temporally well defined</strong>.</td>
+      <td align="center">Leaving garbage bags beside a collection point, abandoning furniture, or unloading construction debris and bulky materials.</td>
+      <td align="center">The visual evidence may unfold across <em>multiple stages</em>, including approaching the site, placing the object, and leaving the scene.</td>
+    </tr>
+    <tr>
+      <td align="center"><strong>DYNAMIC DISPOSAL</strong></td>
+      <td align="center">Brief and spontaneous disposal performed while the subject or vehicle is <em>in motion</em>.</td>
+      <td align="center">Throwing waste from a moving vehicle, dropping litter while walking, or releasing a small object while passing.</td>
+      <td align="center">The event may occur within a <em>fraction of a second</em> and requires sensitivity to <strong>subtle temporal and motion cues</strong>.</td>
+    </tr>
+  </tbody>
+</table>
 
-The benchmark supports two coupled objectives:
+</div>
 
-1. **Video-level detection:** determine whether an illegal dumping event occurs.
-2. **Temporal localization:** estimate the onset timestamp of the dumping event in positive videos.
+The benchmark supports **two coupled objectives**: **video-level detection**, which determines whether an illegal dumping event occurs, and **temporal localization**, which estimates the *event-onset timestamp* in positive videos.
 
-## Dataset at a glance
+## DATASET AT A GLANCE
 
 | Property | Value |
 |---|---:|
@@ -70,11 +89,11 @@ The benchmark supports two coupled objectives:
 | Typical clip duration | **The majority are slightly under 20 seconds** |
 | Approximate mean duration | **≈23.1 seconds per video**, derived from the reported total duration |
 
-## Data collection and sample selection
+## DATA COLLECTION AND SAMPLE SELECTION
 
 The dataset was constructed through a deliberate collection and curation process intended to represent the environments in which automated IWDD systems are likely to operate, including waste collection points, public dumping areas, roadside zones, rural or vegetated locations, and other surveillance contexts.
 
-### Positive samples
+### POSITIVE SAMPLES
 
 The majority of positive videos were collected from **real-world surveillance systems**, including both concealed and openly installed cameras. These recordings capture authentic, unscripted waste-abandonment events under naturally occurring conditions. The collection was designed to preserve the variability typical of operational surveillance footage, including differences in:
 
@@ -87,7 +106,7 @@ The majority of positive videos were collected from **real-world surveillance sy
 
 The positive subset covers static actions such as placing boxes, domestic garbage bags, furniture, construction debris, or bulky materials on the ground, as well as dynamic actions such as throwing or dropping waste while walking or from a moving vehicle.
 
-### Negative samples and hard-negative curation
+### NEGATIVE SAMPLES AND HARD-NEGATIVE CURATION
 
 Negative-sample selection was treated as a central part of the benchmark design. Rather than collecting only obviously unrelated activities, the authors deliberately selected **hard negatives** that resemble illegal dumping in appearance, motion, or context. These include:
 
@@ -112,13 +131,13 @@ flowchart LR
     H --> I[Balanced train/test benchmark]
 ```
 
-## Annotation methodology
+## ANNOTATION METHODOLOGY
 
 All annotations were produced by **human annotators**. For every positive video, the annotation records the exact onset of the disposal event and assigns the event to the static or dynamic taxonomy. The ground-truth onset is defined as the **first frame at which the dumping action becomes visible**, following exhaustive review.
 
 Each video also includes contextual labels describing the time of day and illumination condition. The annotation design is weakly temporal: the event onset is annotated, but the paper explicitly states that dense frame-level annotations are not available.
 
-### Semantic annotation components
+### SEMANTIC ANNOTATION COMPONENTS
 
 | Annotation component | Applies to | Domain / representation | Meaning |
 |---|---|---|---|
@@ -131,7 +150,7 @@ Each video also includes contextual labels describing the time of day and illumi
 > **Serialization note.** The paper specifies the semantic content of the annotations but does not define the exact on-disk format, filenames, field names, data types, or sentinel values used for negative samples. The public release should therefore include a machine-readable schema or example annotation that matches the distributed files. No undocumented JSON or CSV structure is assumed in this README.
 
 
-## Citation
+## CITATION
 
 When using Mivia-IWDD-500, please cite:
 
@@ -149,7 +168,7 @@ When using Mivia-IWDD-500, please cite:
 
 **Paper:** [https://doi.org/10.1016/j.imavis.2026.106125](https://doi.org/10.1016/j.imavis.2026.106125)
 
-## Authors
+## AUTHORS
 
 - **Antonio Greco** — Department of Information and Electrical Engineering and Applied Mathematics, University of Salerno, Italy
 - **Andrea Vincenzo Ricciardi** — Department of Information and Electrical Engineering and Applied Mathematics, University of Salerno, Italy
