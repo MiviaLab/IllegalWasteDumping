@@ -8,6 +8,10 @@
 
 <p align="justify">Mivia-IWDD-500 is a fully balanced public video dataset developed for the automated detection and temporal localization of illegal waste dumping events in realistic surveillance footage. It comprises 500 videos, equally divided into 250 positive and 250 negative samples. The positive subset is further balanced between 125 static and 125 dynamic disposal events, enabling a controlled evaluation across two complementary behavioral modalities.</p>
 
+[![Training Set](https://img.shields.io/badge/TRAINING%20SET%20%E2%80%94%20400%20VIDEOS-1f6feb?style=for-the-badge&logo=googledrive&logoColor=white)](https://drive.google.com/drive/folders/1W6YpHQGi6hj8eKSgL6HmSdbk_k8mmVF1?usp=drive_link) [![Public Test Set ID](https://img.shields.io/badge/PUBLIC%20TEST%20SET%20ID%20%E2%80%94%20100%20VIDEOS-2ea44f?style=for-the-badge&logo=googledrive&logoColor=white)](https://drive.google.com/drive/folders/1MIj9zelKNDHrPLtzZylHv7leZhxhNIdd?usp=drive_link)
+
+[![IWDD 2026 Contest](https://img.shields.io/badge/IWDD%202026%20CONTEST-8b5cf6?style=for-the-badge)](https://mivia.unisa.it/iwddcontest2026/)
+
 </div>
 
 ---
@@ -19,6 +23,7 @@
 - [DATASET](#dataset)
 - [DATA COLLECTION AND SAMPLE SELECTION](#data-collection-and-sample-selection)
 - [ANNOTATION METHODOLOGY](#annotation-methodology)
+- [ANNOTATION FORMAT](#annotation-format)
 - [CITATION](#citation)
 - [AUTHORS](#authors)
 
@@ -74,7 +79,49 @@
 
 <div align="center"><table><thead><tr><th align="center" colspan="3">SEMANTIC&nbsp;ANNOTATION&nbsp;COMPONENTS</th></tr><tr><th align="center">COMPONENT</th><th align="center">APPLIES&nbsp;TO</th><th align="center">DOMAIN&nbsp;/&nbsp;REPRESENTATION</th></tr></thead><tbody><tr><td align="center"><b>VIDEO-LEVEL&nbsp;LABEL</b></td><td align="center">ALL&nbsp;VIDEOS</td><td align="center"><span style="color:#e03131">DUMPING</span>&nbsp;/&nbsp;<span style="color:#2f9e44">NO&nbsp;DUMPING</span></td></tr><tr><td align="center"><b>EVENT-ONSET&nbsp;TIMESTAMP</b></td><td align="center">POSITIVE&nbsp;VIDEOS</td><td align="center">TIMESTAMP&nbsp;ON&nbsp;VIDEO&nbsp;TIMELINE</td></tr><tr><td align="center"><b>DISPOSAL&nbsp;MODALITY</b></td><td align="center">POSITIVE&nbsp;VIDEOS</td><td align="center"><span style="color:#1971c2">STATIC</span>&nbsp;/&nbsp;<span style="color:#e8590c">DYNAMIC</span></td></tr><tr><td align="center"><b>TIME&nbsp;OF&nbsp;DAY</b></td><td align="center">ALL&nbsp;VIDEOS</td><td align="center"><span style="color:#f2a900">DAY</span>&nbsp;/&nbsp;<span style="color:#5f3dc4">NIGHT</span></td></tr><tr><td align="center"><b>ILLUMINATION</b></td><td align="center">ALL&nbsp;VIDEOS</td><td align="center"><span style="color:#0c8599">BRIGHT</span>&nbsp;/&nbsp;<span style="color:#868e96">DIM</span></td></tr></tbody></table></div>
 
-<p align="justify">Serialization note. The paper specifies the semantic content of the annotations but does not define the exact on-disk format, filenames, field names, data types, or sentinel values used for negative samples. The public release should therefore include a machine-readable schema or an example annotation that matches the distributed files. No undocumented JSON or CSV structure is assumed in this README.</p>
+<p align="justify">Serialization note. The paper specifies the semantic content of the annotations but does not define the exact on-disk format. The serialization adopted in the public release — including field names, data types, and the sentinel value used for negative samples — is documented in the following section.</p>
+
+---
+
+## ANNOTATION FORMAT
+
+<p align="justify">Each video in the dataset is released together with a JSON annotation file. The two sample classes share the same structure and differ only in the values of the <code>label</code>, <code>timestamp</code>, and <code>event_type</code> fields.</p>
+
+### NEGATIVE VIDEOS
+
+<p align="justify">Videos that do not contain an illegal dumping event set <code>label</code> to <code>false</code>, use a <code>timestamp</code> of <code>-1</code> to indicate the absence of any event, and set <code>event_type</code> to <code>normal</code>.</p>
+
+```json
+{
+  "label": "false",
+  "timestamp": -1,
+  "metadata": {
+    "video_id": "vid0005.mp4",
+    "resolution": "1920x1080",
+    "frame_rate": 29.97,
+    "duration": 17.42,
+    "event_type": "normal"
+  }
+}
+```
+
+### POSITIVE VIDEOS
+
+<p align="justify">Videos that contain an illegal dumping event set <code>label</code> to <code>true</code>, while <code>timestamp</code> reports, in seconds, the initial instant (onset) of the event. The <code>event_type</code> field takes either <code>static dumping</code> or <code>dynamic dumping</code>.</p>
+
+```json
+{
+  "label": "true",
+  "timestamp": 2,
+  "metadata": {
+    "video_id": "vid0012.mp4",
+    "resolution": "1920x1080",
+    "frame_rate": 59.94,
+    "duration": 15.63,
+    "event_type": "dynamic dumping"
+  }
+}
+```
 
 ---
 
