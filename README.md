@@ -29,57 +29,11 @@
 ## TASK DEFINITION
 
 <p align="justify">The benchmark distinguishes two complementary disposal modalities, defined according to the spatial and temporal characteristics of the abandonment action:</p>
-
-<div align="center">
-<table>
-  <thead>
-    <tr>
-      <th align="center" width="16%">MODALITY</th>
-      <th align="center" width="28%">DEFINITION</th>
-      <th align="center" width="28%">REPRESENTATIVE EXAMPLES</th>
-      <th align="center" width="28%">MAIN DETECTION CHALLENGE</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td align="center"><strong>STATIC DISPOSAL</strong></td>
-      <td align="center">Intentional deposition of waste at a selected location. The action is generally <strong>spatially localized</strong> and <strong>temporally well defined</strong>.</td>
-      <td align="center">Leaving garbage bags beside a collection point, abandoning furniture, or unloading construction debris and bulky materials.</td>
-      <td align="center">The visual evidence may unfold across multiple stages, including approaching the site, placing the object, and leaving the scene.</td>
-    </tr>
-    <tr>
-      <td align="center"><strong>DYNAMIC DISPOSAL</strong></td>
-      <td align="center">Brief and spontaneous disposal performed while the subject or vehicle is in motion.</td>
-      <td align="center">Throwing waste from a moving vehicle, dropping litter while walking, or releasing a small object while passing.</td>
-      <td align="center">The event may occur within a fraction of a second and requires sensitivity to <strong>subtle temporal and motion cues</strong>.</td>
-    </tr>
-  </tbody>
-</table>
-</div>
-
+<div align="center"><table><thead><tr><th align="center" colspan="4" nowrap>TASK DEFINITION</th></tr><tr><th align="center" nowrap>MODALITY</th><th align="center" nowrap>DEFINITION</th><th align="center" nowrap>REPRESENTATIVE EXAMPLES</th><th align="center" nowrap>MAIN DETECTION CHALLENGE</th></tr></thead><tbody><tr><td align="center" nowrap>STATIC&nbsp;DISPOSAL</td><td align="center" nowrap>Intentional deposition of waste at a selected location; the action is spatially localized and temporally well defined.</td><td align="center" nowrap>Leaving garbage bags beside a collection point, abandoning furniture, or unloading construction debris and bulky materials.</td><td align="center" nowrap>The evidence may unfold across multiple stages, including approaching the site, placing the object, and leaving the scene.</td></tr><tr><td align="center" nowrap>DYNAMIC&nbsp;DISPOSAL</td><td align="center" nowrap>Brief and spontaneous disposal performed while the subject or vehicle is in motion.</td><td align="center" nowrap>Throwing waste from a moving vehicle, dropping litter while walking, or releasing a small object while passing.</td><td align="center" nowrap>The event may occur within a fraction of a second and requires sensitivity to subtle temporal and motion cues.</td></tr></tbody></table></div>
 <p align="justify">The benchmark supports two coupled objectives: video-level detection, which determines whether an illegal dumping event occurs, and temporal localization, which estimates the event-onset timestamp in positive videos. This formulation requires models to combine global scene understanding with fine-grained temporal reasoning.</p>
 
 ## DATASET
-
-<div align="center">
-<table>
-<thead>
-<tr><th align="center" colspan="2" nowrap><strong>MIVIA-IWDD-500&nbsp;DATASET&nbsp;SUMMARY</strong></th></tr>
-<tr><th align="center" width="50%" nowrap><strong>PROPERTY</strong></th><th align="center" width="50%" nowrap><strong>VALUE</strong></th></tr>
-</thead>
-<tbody>
-<tr><td align="center" nowrap><strong>DATASET&nbsp;NAME</strong></td><td align="center" nowrap><strong>MIVIA-IWDD-500</strong></td></tr>
-<tr><td align="center" nowrap><strong>TOTAL&nbsp;VIDEOS</strong></td><td align="center" nowrap><strong>500</strong></td></tr>
-<tr><td align="center" nowrap><strong>TOTAL&nbsp;FOOTAGE</strong></td><td align="center" nowrap><strong>APPROXIMATELY&nbsp;3.21&nbsp;HOURS</strong></td></tr>
-<tr><td align="center" nowrap><strong>POSITIVE&nbsp;VIDEOS</strong></td><td align="center" nowrap><strong>250</strong></td></tr>
-<tr><td align="center" nowrap><strong>NEGATIVE&nbsp;VIDEOS</strong></td><td align="center" nowrap><strong>250</strong></td></tr>
-<tr><td align="center" nowrap><strong>STATIC&nbsp;DISPOSAL&nbsp;VIDEOS</strong></td><td align="center" nowrap><strong>125</strong></td></tr>
-<tr><td align="center" nowrap><strong>DYNAMIC&nbsp;DISPOSAL&nbsp;VIDEOS</strong></td><td align="center" nowrap><strong>125</strong></td></tr>
-<tr><td align="center" nowrap><strong>OFFICIAL&nbsp;SPLIT</strong></td><td align="center" nowrap><strong>400&nbsp;TRAINING&nbsp;/&nbsp;100&nbsp;TEST</strong></td></tr>
-</tbody>
-</table>
-</div>
-
+<div align="center"><table><thead><tr><th align="center" colspan="2" nowrap>MIVIA-IWDD-500&nbsp;DATASET&nbsp;SUMMARY</th></tr><tr><th align="center" nowrap>PROPERTY</th><th align="center" nowrap>VALUE</th></tr></thead><tbody><tr><td align="center" nowrap>DATASET&nbsp;NAME</td><td align="center" nowrap>MIVIA-IWDD-500</td></tr><tr><td align="center" nowrap>TOTAL&nbsp;VIDEOS</td><td align="center" nowrap>500</td></tr><tr><td align="center" nowrap>TOTAL&nbsp;FOOTAGE</td><td align="center" nowrap>APPROXIMATELY&nbsp;3.21&nbsp;HOURS</td></tr><tr><td align="center" nowrap>POSITIVE&nbsp;VIDEOS</td><td align="center" nowrap>250</td></tr><tr><td align="center" nowrap>NEGATIVE&nbsp;VIDEOS</td><td align="center" nowrap>250</td></tr><tr><td align="center" nowrap>STATIC&nbsp;DISPOSAL&nbsp;VIDEOS</td><td align="center" nowrap>125</td></tr><tr><td align="center" nowrap>DYNAMIC&nbsp;DISPOSAL&nbsp;VIDEOS</td><td align="center" nowrap>125</td></tr><tr><td align="center" nowrap>OFFICIAL&nbsp;SPLIT</td><td align="center" nowrap>400&nbsp;TRAINING&nbsp;/&nbsp;100&nbsp;TEST</td></tr></tbody></table></div>
 ## DATA COLLECTION AND SAMPLE SELECTION
 
 <p align="justify">The dataset was constructed through a deliberate collection and curation process designed to represent the environments in which automated IWDD systems are likely to operate. These include waste collection points, public dumping areas, roadside zones, rural or vegetated locations, and other surveillance contexts characterized by variable visibility, scene complexity, and human or vehicle activity.</p>
@@ -100,23 +54,7 @@
 <p align="justify">Each video also includes contextual labels describing the time of day and the illumination condition. The annotation design is weakly temporal: the event onset is annotated, but the paper explicitly states that dense frame-level annotations are not available. This structure supports both video-level supervision and fine-grained analysis across behavioral and environmental conditions.</p>
 
 ### SEMANTIC ANNOTATION COMPONENTS
-
-<div align="center">
-<table>
-<thead>
-<tr><th align="center" colspan="3"><strong>SEMANTIC ANNOTATION COMPONENTS</strong></th></tr>
-<tr><th align="center" width="34%"><strong>ANNOTATION COMPONENT</strong></th><th align="center" width="22%"><strong>APPLIES TO</strong></th><th align="center" width="44%"><strong>DOMAIN / REPRESENTATION</strong></th></tr>
-</thead>
-<tbody>
-<tr><td align="center"><strong>VIDEO-LEVEL LABEL</strong></td><td align="center"><strong>ALL VIDEOS</strong></td><td align="center"><strong>BINARY: DUMPING / NO DUMPING</strong></td></tr>
-<tr><td align="center"><strong>EVENT-ONSET TIMESTAMP</strong></td><td align="center"><strong>POSITIVE VIDEOS</strong></td><td align="center"><strong>TEMPORAL INSTANT RELATIVE TO THE VIDEO TIMELINE</strong></td></tr>
-<tr><td align="center"><strong>DISPOSAL MODALITY</strong></td><td align="center"><strong>POSITIVE VIDEOS</strong></td><td align="center"><strong>STATIC / DYNAMIC</strong></td></tr>
-<tr><td align="center"><strong>TIME OF DAY</strong></td><td align="center"><strong>ALL VIDEOS</strong></td><td align="center"><strong>DAY / NIGHT</strong></td></tr>
-<tr><td align="center"><strong>ILLUMINATION</strong></td><td align="center"><strong>ALL VIDEOS</strong></td><td align="center"><strong>BRIGHT / DIM</strong></td></tr>
-</tbody>
-</table>
-</div>
-
+<div align="center"><table><thead><tr><th align="center" colspan="3" nowrap>SEMANTIC&nbsp;ANNOTATION&nbsp;COMPONENTS</th></tr><tr><th align="center" nowrap>ANNOTATION&nbsp;COMPONENT</th><th align="center" nowrap>APPLIES&nbsp;TO</th><th align="center" nowrap>DOMAIN&nbsp;/&nbsp;REPRESENTATION</th></tr></thead><tbody><tr><td align="center" nowrap>VIDEO-LEVEL&nbsp;LABEL</td><td align="center" nowrap>ALL&nbsp;VIDEOS</td><td align="center" nowrap>BINARY:&nbsp;DUMPING&nbsp;/&nbsp;NO&nbsp;DUMPING</td></tr><tr><td align="center" nowrap>EVENT-ONSET&nbsp;TIMESTAMP</td><td align="center" nowrap>POSITIVE&nbsp;VIDEOS</td><td align="center" nowrap>TEMPORAL&nbsp;INSTANT&nbsp;RELATIVE&nbsp;TO&nbsp;THE&nbsp;VIDEO&nbsp;TIMELINE</td></tr><tr><td align="center" nowrap>DISPOSAL&nbsp;MODALITY</td><td align="center" nowrap>POSITIVE&nbsp;VIDEOS</td><td align="center" nowrap>STATIC&nbsp;/&nbsp;DYNAMIC</td></tr><tr><td align="center" nowrap>TIME&nbsp;OF&nbsp;DAY</td><td align="center" nowrap>ALL&nbsp;VIDEOS</td><td align="center" nowrap>DAY&nbsp;/&nbsp;NIGHT</td></tr><tr><td align="center" nowrap>ILLUMINATION</td><td align="center" nowrap>ALL&nbsp;VIDEOS</td><td align="center" nowrap>BRIGHT&nbsp;/&nbsp;DIM</td></tr></tbody></table></div>
 <p align="justify">Serialization note. The paper specifies the semantic content of the annotations but does not define the exact on-disk format, filenames, field names, data types, or sentinel values used for negative samples. The public release should therefore include a machine-readable schema or an example annotation that matches the distributed files. No undocumented JSON or CSV structure is assumed in this README.</p>
 
 ## CITATION
@@ -139,12 +77,10 @@
 
 ## AUTHORS
 
-<ul>
-  <li align="justify">Antonio Greco — Department of Information and Electrical Engineering and Applied Mathematics, University of Salerno, Italy</li>
+<ul><li align="justify">Antonio Greco — Department of Information and Electrical Engineering and Applied Mathematics, University of Salerno, Italy</li>
   <li align="justify">Andrea Vincenzo Ricciardi — Department of Information and Electrical Engineering and Applied Mathematics, University of Salerno, Italy</li>
   <li align="justify">Carlo Sansone — Department of Electrical Engineering and Information Technology, University of Naples Federico II, Italy</li>
-  <li align="justify">Bruno Vento — Consorzio Interuniversitario Nazionale per l’Informatica (CINI), Italy</li>
-</ul>
+  <li align="justify">Bruno Vento — Consorzio Interuniversitario Nazionale per l’Informatica (CINI), Italy</li></ul>
 
 <p align="justify">All authors contributed equally to the work.</p>
 
