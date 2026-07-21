@@ -4,7 +4,7 @@
 
 ### A PUBLIC VIDEO BENCHMARK FOR AUTOMATED ILLEGAL WASTE DUMPING DETECTION AND TEMPORAL LOCALIZATION
 
-[![Paper](https://img.shields.io/badge/Paper-Image%20and%20Vision%20Computing-1f6feb)](https://doi.org/10.1016/j.imavis.2026.106125) [![Videos](https://img.shields.io/badge/Videos-500-f97316)](#dataset) [![Duration](https://img.shields.io/badge/Footage-%E2%89%883.21%20hours-2ea44f)](#dataset) [![Task](https://img.shields.io/badge/Task-Illegal%20Waste%20Dumping%20Detection-8b5cf6)](#task-definition)
+[![Paper](https://img.shields.io/badge/Paper-Image%20and%20Vision%20Computing-1f6feb)](https://doi.org/10.1016/j.imavis.2026.106125) [![Videos](https://img.shields.io/badge/Videos-500-f97316)](#dataset) [![Duration](https://img.shields.io/badge/Footage-%E2%89%883.21%20hours-2ea44f)](#dataset)
 
 <p align="justify">Mivia-IWDD-500 is a fully balanced public video dataset developed for the automated detection and temporal localization of illegal waste dumping events in realistic surveillance footage. It comprises 500 videos, equally divided into 250 positive and 250 negative samples. The positive subset is further balanced between 125 static and 125 dynamic disposal events, enabling a controlled evaluation across two complementary behavioral modalities.</p>
 
@@ -34,7 +34,7 @@
 
 <p align="justify">The benchmark distinguishes two complementary disposal modalities, defined according to the spatial and temporal characteristics of the abandonment action:</p>
 
-<div align="center"><table><thead><tr><th align="center" colspan="3">TASK DEFINITION</th></tr><tr><th align="center">MODALITY</th><th align="center">DESCRIPTION</th><th align="center">MAIN CHALLENGE</th></tr></thead><tbody><tr><td align="center"><img src="https://img.shields.io/badge/STATIC%20DISPOSAL-1f6feb?style=for-the-badge" alt="STATIC DISPOSAL"></td><td align="center">Waste intentionally left at a fixed location.</td><td align="center">Multi-stage action, temporally extended.</td></tr><tr><td align="center"><img src="https://img.shields.io/badge/DYNAMIC%20DISPOSAL-f97316?style=for-the-badge" alt="DYNAMIC DISPOSAL"></td><td align="center">Waste released while moving, on foot or by vehicle.</td><td align="center">Sub-second event, subtle motion cues.</td></tr></tbody></table></div>
+<div align="center"><table><thead><tr><th align="center" colspan="3">TASK DEFINITION</th></tr><tr><th align="center">MODALITY</th><th align="center">DESCRIPTION</th><th align="center">MAIN CHALLENGE</th></tr></thead><tbody><tr><td align="center"><img src="https://img.shields.io/badge/STATIC%20DISPOSAL-1f6feb?style=for-the-badge" alt="STATIC DISPOSAL"></td><td align="center" nowrap>Waste&nbsp;intentionally&nbsp;left&nbsp;at&nbsp;a&nbsp;fixed&nbsp;location.</td><td align="center" nowrap>Multi-stage&nbsp;action,&nbsp;temporally&nbsp;extended.</td></tr><tr><td align="center"><img src="https://img.shields.io/badge/DYNAMIC%20DISPOSAL-f97316?style=for-the-badge" alt="DYNAMIC DISPOSAL"></td><td align="center" nowrap>Waste&nbsp;released&nbsp;while&nbsp;moving,&nbsp;on&nbsp;foot&nbsp;or&nbsp;by&nbsp;vehicle.</td><td align="center" nowrap>Sub-second&nbsp;event,&nbsp;subtle&nbsp;motion&nbsp;cues.</td></tr></tbody></table></div>
 
 <p align="justify">The benchmark supports two coupled objectives: video-level detection, which determines whether an illegal dumping event occurs, and temporal localization, which estimates the event-onset timestamp in positive videos. This formulation requires models to combine global scene understanding with fine-grained temporal reasoning.</p>
 
@@ -72,7 +72,7 @@
 
 ### SEMANTIC ANNOTATION COMPONENTS
 
-<div align="center"><table><thead><tr><th align="center" colspan="3">SEMANTIC&nbsp;ANNOTATION&nbsp;COMPONENTS</th></tr><tr><th align="center">COMPONENT</th><th align="center">APPLIES&nbsp;TO</th><th align="center">DOMAIN&nbsp;/&nbsp;REPRESENTATION</th></tr></thead><tbody><tr><td align="center"><b>VIDEO-LEVEL&nbsp;LABEL</b></td><td align="center"><img src="https://img.shields.io/badge/ALL%20VIDEOS-6e7681?style=for-the-badge" alt="ALL VIDEOS"></td><td align="center">DUMPING&nbsp;/&nbsp;NO&nbsp;DUMPING</td></tr><tr><td align="center"><b>EVENT-ONSET&nbsp;TIMESTAMP</b></td><td align="center"><img src="https://img.shields.io/badge/POSITIVE%20VIDEOS-2ea44f?style=for-the-badge" alt="POSITIVE VIDEOS"></td><td align="center">TIMESTAMP&nbsp;ON&nbsp;VIDEO&nbsp;TIMELINE</td></tr><tr><td align="center"><b>DISPOSAL&nbsp;MODALITY</b></td><td align="center"><img src="https://img.shields.io/badge/POSITIVE%20VIDEOS-2ea44f?style=for-the-badge" alt="POSITIVE VIDEOS"></td><td align="center">STATIC&nbsp;/&nbsp;DYNAMIC</td></tr><tr><td align="center"><b>TIME&nbsp;OF&nbsp;DAY</b></td><td align="center"><img src="https://img.shields.io/badge/ALL%20VIDEOS-6e7681?style=for-the-badge" alt="ALL VIDEOS"></td><td align="center">DAY&nbsp;/&nbsp;NIGHT</td></tr><tr><td align="center"><b>ILLUMINATION</b></td><td align="center"><img src="https://img.shields.io/badge/ALL%20VIDEOS-6e7681?style=for-the-badge" alt="ALL VIDEOS"></td><td align="center">BRIGHT&nbsp;/&nbsp;DIM</td></tr></tbody></table></div>
+<div align="center"><table><thead><tr><th align="center" colspan="3">SEMANTIC&nbsp;ANNOTATION&nbsp;COMPONENTS</th></tr><tr><th align="center">COMPONENT</th><th align="center">APPLIES&nbsp;TO</th><th align="center">DOMAIN&nbsp;/&nbsp;REPRESENTATION</th></tr></thead><tbody><tr><td align="center"><b>VIDEO-LEVEL&nbsp;LABEL</b></td><td align="center">ALL&nbsp;VIDEOS</td><td align="center" nowrap><img src="https://img.shields.io/badge/DUMPING-c0392b?style=flat-square" alt="DUMPING">&nbsp;/&nbsp;<img src="https://img.shields.io/badge/NO%20DUMPING-27ae60?style=flat-square" alt="NO DUMPING"></td></tr><tr><td align="center"><b>EVENT-ONSET&nbsp;TIMESTAMP</b></td><td align="center">POSITIVE&nbsp;VIDEOS</td><td align="center">TIMESTAMP&nbsp;ON&nbsp;VIDEO&nbsp;TIMELINE</td></tr><tr><td align="center"><b>DISPOSAL&nbsp;MODALITY</b></td><td align="center">POSITIVE&nbsp;VIDEOS</td><td align="center">STATIC&nbsp;/&nbsp;DYNAMIC</td></tr><tr><td align="center"><b>TIME&nbsp;OF&nbsp;DAY</b></td><td align="center">ALL&nbsp;VIDEOS</td><td align="center" nowrap><img src="https://img.shields.io/badge/DAY-d68910?style=flat-square" alt="DAY">&nbsp;/&nbsp;<img src="https://img.shields.io/badge/NIGHT-34495e?style=flat-square" alt="NIGHT"></td></tr><tr><td align="center"><b>ILLUMINATION</b></td><td align="center">ALL&nbsp;VIDEOS</td><td align="center" nowrap><img src="https://img.shields.io/badge/BRIGHT-d4ac0d?style=flat-square" alt="BRIGHT">&nbsp;/&nbsp;<img src="https://img.shields.io/badge/DIM-7f8c8d?style=flat-square" alt="DIM"></td></tr></tbody></table></div>
 
 <p align="justify">Serialization note. The paper specifies the semantic content of the annotations but does not define the exact on-disk format, filenames, field names, data types, or sentinel values used for negative samples. The public release should therefore include a machine-readable schema or an example annotation that matches the distributed files. No undocumented JSON or CSV structure is assumed in this README.</p>
 
@@ -80,32 +80,37 @@
 
 ## CITATION
 
-<p align="justify">When using Mivia-IWDD-500 in scientific work, please cite the associated publication:</p>
+<p align="justify">When using Mivia-IWDD-500 in scientific work, please cite the following publications:</p>
 
 ```bibtex
 @article{greco2026benchmarking,
-  title   = {Benchmarking Illegal Waste Dumping Detection: A Public Video Dataset and a Reference Baseline},
-  author  = {Greco, Antonio and Ricciardi, Andrea Vincenzo and Sansone, Carlo and Vento, Bruno},
-  journal = {Image and Vision Computing},
-  volume  = {174},
-  pages   = {106125},
-  year    = {2026},
-  doi     = {10.1016/j.imavis.2026.106125}
+  title     = {Benchmarking Illegal Waste Dumping Detection: A Public Video Dataset and a Reference Baseline},
+  author    = {Greco, Antonio and Ricciardi, Andrea Vincenzo and Sansone, Carlo and Vento, Bruno},
+  journal   = {Image and Vision Computing},
+  volume    = {174},
+  pages     = {106125},
+  year      = {2026}
+}
+
+@inproceedings{bouwmans2026illegal,
+  title     = {Illegal waste dumping detection},
+  author    = {Bouwmans, Thierry and Greco, Antonio and Pierard, Sebastien and Ricciardi, Andrea Vincenzo and Sansone, Carlo and Van Droogenbroeck, Marc and Vento, Bruno},
+  booktitle = {Proceedings of the IEEE/CVF Winter Conference on Applications of Computer Vision},
+  pages     = {539--548},
+  year      = {2026}
 }
 ```
-
-<p align="justify">Paper: <a href="https://doi.org/10.1016/j.imavis.2026.106125">https://doi.org/10.1016/j.imavis.2026.106125</a></p>
 
 ---
 
 ## AUTHORS
 
-<ul><li align="justify">Antonio Greco — Department of Information and Electrical Engineering and Applied Mathematics, University of Salerno, Italy</li>
-  <li align="justify">Andrea Vincenzo Ricciardi — Department of Information and Electrical Engineering and Applied Mathematics, University of Salerno, Italy</li>
-  <li align="justify">Carlo Sansone — Department of Electrical Engineering and Information Technology, University of Naples Federico II, Italy</li>
-  <li align="justify">Bruno Vento — Consorzio Interuniversitario Nazionale per l’Informatica (CINI), Italy</li></ul>
+<ul><li align="justify">Antonio Greco — DIEM — University of Salerno, ITA — <a href="mailto:agreco@unisa.it">agreco@unisa.it</a></li>
+  <li align="justify">Andrea Vincenzo Ricciardi — DIEM — University of Salerno, ITA — <a href="mailto:anricciardi@unisa.it">anricciardi@unisa.it</a></li>
+  <li align="justify">Carlo Sansone — DIETI — University of Naples Federico II, ITA — <a href="mailto:carlo.sansone@unina.it">carlo.sansone@unina.it</a></li>
+  <li align="justify">Bruno Vento — CINI, ITA — <a href="mailto:brunovento.it@gmail.com">brunovento.it@gmail.com</a></li></ul>
 
-<p align="justify">All authors contributed equally to the work.</p>
+<p align="justify">All authors contributed equally to the work. For any additional requests, clarifications, or information not available in this repository, please do not hesitate to contact us at the e-mail addresses listed above.</p>
 
 ---
 
