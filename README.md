@@ -1,18 +1,15 @@
 <div align="center">
 
-# Mivia-IWDD-500
+# Mivia-IWDD-500 Dataset
 
-### A public video benchmark for illegal waste dumping detection
+### A PUBLIC VIDEO BENCHMARK FOR AUTOMATED ILLEGAL WASTE DUMPING DETECTION AND TEMPORAL LOCALIZATION
 
 [![Paper](https://img.shields.io/badge/Paper-Image%20and%20Vision%20Computing-1f6feb)](https://doi.org/10.1016/j.imavis.2026.106125)
-[![DOI](https://img.shields.io/badge/DOI-10.1016%2Fj.imavis.2026.106125-0a7bbb)](https://doi.org/10.1016/j.imavis.2026.106125)
 [![Videos](https://img.shields.io/badge/Videos-500-f97316)](#dataset-at-a-glance)
-[![Duration](https://img.shields.io/badge/Footage-%E2%89%883.21%20hours-f97316)](#dataset-at-a-glance)
-[![Task](https://img.shields.io/badge/Task-Illegal%20Waste%20Dumping%20Detection-f97316)](#task-definition)
+[![Duration](https://img.shields.io/badge/Footage-%E2%89%883.21%20hours-2ea44f)](#dataset-at-a-glance)
+[![Task](https://img.shields.io/badge/Task-Illegal%20Waste%20Dumping%20Detection-8b5cf6)](#task-definition)
 
-Mivia-IWDD-500 is a fully balanced video dataset designed for the automated detection and temporal localization of illegal waste dumping events in realistic surveillance footage. It contains **500 videos**, including **250 positive** and **250 negative** samples. Positive videos are evenly divided between **static** and **dynamic** disposal events.
-
-[Paper](https://doi.org/10.1016/j.imavis.2026.106125) · [Official repository](https://github.com/MiviaLab/IllegalWasteDumping) · [Citation](#citation)
+**Mivia-IWDD-500** is a *fully balanced public video dataset* designed for the **automated detection** and **temporal localization** of illegal waste dumping events in realistic surveillance footage. It comprises **500 videos**, equally divided into **250 positive** and **250 negative** samples. The positive subset is itself balanced between **125 static** and **125 dynamic** disposal events.
 
 </div>
 
