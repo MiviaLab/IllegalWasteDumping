@@ -4,13 +4,14 @@
 
 ### A PUBLIC VIDEO BENCHMARK FOR AUTOMATED ILLEGAL WASTE DUMPING DETECTION AND TEMPORAL LOCALIZATION
 
-[![Paper](https://img.shields.io/badge/Paper-Image%20and%20Vision%20Computing-1f6feb)](https://doi.org/10.1016/j.imavis.2026.106125) [![Videos](https://img.shields.io/badge/Videos-500-f97316)](#dataset) [![Duration](https://img.shields.io/badge/Footage-%E2%89%883.21%20hours-2ea44f)](#dataset)
+[![Paper](https://img.shields.io/badge/PAPER-IMAGE%20AND%20VISION%20COMPUTING-1f6feb?style=for-the-badge)](https://doi.org/10.1016/j.imavis.2026.106125)
+[![Videos](https://img.shields.io/badge/VIDEOS-500-f97316?style=for-the-badge)](#dataset)
+[![Footage](https://img.shields.io/badge/FOOTAGE-%E2%89%883.21%20HOURS-2ea44f?style=for-the-badge)](#dataset)
+[![Training Set](https://img.shields.io/badge/TRAINING%20SET-400%20VIDEOS-1f6feb?style=for-the-badge&logo=googledrive&logoColor=white)](https://drive.google.com/drive/folders/1W6YpHQGi6hj8eKSgL6HmSdbk_k8mmVF1?usp=drive_link)
+[![Public Test Set ID](https://img.shields.io/badge/PUBLIC%20TEST%20SET%20ID-100%20VIDEOS-2ea44f?style=for-the-badge&logo=googledrive&logoColor=white)](https://drive.google.com/drive/folders/1MIj9zelKNDHrPLtzZylHv7leZhxhNIdd?usp=drive_link)
+[![IWDD 2026 Contest](https://img.shields.io/badge/CONTEST-IWDD%202026-8b5cf6?style=for-the-badge)](https://mivia.unisa.it/iwddcontest2026/)
 
 <p align="justify">Mivia-IWDD-500 is a fully balanced public video dataset developed for the automated detection and temporal localization of illegal waste dumping events in realistic surveillance footage. It comprises 500 videos, equally divided into 250 positive and 250 negative samples. The positive subset is further balanced between 125 static and 125 dynamic disposal events, enabling a controlled evaluation across two complementary behavioral modalities.</p>
-
-[![Training Set](https://img.shields.io/badge/TRAINING%20SET%20%E2%80%94%20400%20VIDEOS-1f6feb?style=for-the-badge&logo=googledrive&logoColor=white)](https://drive.google.com/drive/folders/1W6YpHQGi6hj8eKSgL6HmSdbk_k8mmVF1?usp=drive_link) [![Public Test Set ID](https://img.shields.io/badge/PUBLIC%20TEST%20SET%20ID%20%E2%80%94%20100%20VIDEOS-2ea44f?style=for-the-badge&logo=googledrive&logoColor=white)](https://drive.google.com/drive/folders/1MIj9zelKNDHrPLtzZylHv7leZhxhNIdd?usp=drive_link)
-
-[![IWDD 2026 Contest](https://img.shields.io/badge/IWDD%202026%20CONTEST-8b5cf6?style=for-the-badge)](https://mivia.unisa.it/iwddcontest2026/)
 
 </div>
 
@@ -77,7 +78,7 @@
 
 ### SEMANTIC ANNOTATION COMPONENTS
 
-<div align="center"><table><thead><tr><th align="center" colspan="3">SEMANTIC&nbsp;ANNOTATION&nbsp;COMPONENTS</th></tr><tr><th align="center">COMPONENT</th><th align="center">APPLIES&nbsp;TO</th><th align="center">DOMAIN&nbsp;/&nbsp;REPRESENTATION</th></tr></thead><tbody><tr><td align="center"><b>VIDEO-LEVEL&nbsp;LABEL</b></td><td align="center">ALL&nbsp;VIDEOS</td><td align="center"><span style="color:#e03131">DUMPING</span>&nbsp;/&nbsp;<span style="color:#2f9e44">NO&nbsp;DUMPING</span></td></tr><tr><td align="center"><b>EVENT-ONSET&nbsp;TIMESTAMP</b></td><td align="center">POSITIVE&nbsp;VIDEOS</td><td align="center">TIMESTAMP&nbsp;ON&nbsp;VIDEO&nbsp;TIMELINE</td></tr><tr><td align="center"><b>DISPOSAL&nbsp;MODALITY</b></td><td align="center">POSITIVE&nbsp;VIDEOS</td><td align="center"><span style="color:#1971c2">STATIC</span>&nbsp;/&nbsp;<span style="color:#e8590c">DYNAMIC</span></td></tr><tr><td align="center"><b>TIME&nbsp;OF&nbsp;DAY</b></td><td align="center">ALL&nbsp;VIDEOS</td><td align="center"><span style="color:#f2a900">DAY</span>&nbsp;/&nbsp;<span style="color:#5f3dc4">NIGHT</span></td></tr><tr><td align="center"><b>ILLUMINATION</b></td><td align="center">ALL&nbsp;VIDEOS</td><td align="center"><span style="color:#0c8599">BRIGHT</span>&nbsp;/&nbsp;<span style="color:#868e96">DIM</span></td></tr></tbody></table></div>
+<div align="center"><table><thead><tr><th align="center" colspan="3">SEMANTIC&nbsp;ANNOTATION&nbsp;COMPONENTS</th></tr><tr><th align="center">COMPONENT</th><th align="center">APPLIES&nbsp;TO</th><th align="center">DOMAIN&nbsp;/&nbsp;REPRESENTATION</th></tr></thead><tbody><tr><td align="center"><b>VIDEO-LEVEL&nbsp;LABEL</b></td><td align="center">ALL&nbsp;VIDEOS</td><td align="center"><code>DUMPING</code>&nbsp;/&nbsp;<code>NO&nbsp;DUMPING</code></td></tr><tr><td align="center"><b>EVENT-ONSET&nbsp;TIMESTAMP</b></td><td align="center">POSITIVE&nbsp;VIDEOS</td><td align="center">TIMESTAMP&nbsp;ON&nbsp;VIDEO&nbsp;TIMELINE</td></tr><tr><td align="center"><b>DISPOSAL&nbsp;MODALITY</b></td><td align="center">POSITIVE&nbsp;VIDEOS</td><td align="center"><code>STATIC</code>&nbsp;/&nbsp;<code>DYNAMIC</code></td></tr><tr><td align="center"><b>TIME&nbsp;OF&nbsp;DAY</b></td><td align="center">ALL&nbsp;VIDEOS</td><td align="center"><code>DAY</code>&nbsp;/&nbsp;<code>NIGHT</code></td></tr><tr><td align="center"><b>ILLUMINATION</b></td><td align="center">ALL&nbsp;VIDEOS</td><td align="center"><code>BRIGHT</code>&nbsp;/&nbsp;<code>DIM</code></td></tr></tbody></table></div>
 
 <p align="justify">Serialization note. The paper specifies the semantic content of the annotations but does not define the exact on-disk format. The serialization adopted in the public release — including field names, data types, and the sentinel value used for negative samples — is documented in the following section.</p>
 
