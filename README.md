@@ -37,6 +37,8 @@
 
 <div align="center"><table><thead><tr><th align="center" colspan="3">TASK DEFINITION</th></tr><tr><th align="center">MODALITY</th><th align="center">DESCRIPTION</th><th align="center">MAIN CHALLENGE</th></tr></thead><tbody><tr><td align="center"><b>STATIC&nbsp;DISPOSAL</b></td><td align="center" nowrap>Waste&nbsp;intentionally&nbsp;left&nbsp;at&nbsp;a&nbsp;fixed&nbsp;location.</td><td align="center" nowrap>Multi-stage&nbsp;action,&nbsp;temporally&nbsp;extended.</td></tr><tr><td align="center"><b>DYNAMIC&nbsp;DISPOSAL</b></td><td align="center" nowrap>Waste&nbsp;released&nbsp;while&nbsp;moving,&nbsp;on&nbsp;foot&nbsp;or&nbsp;by&nbsp;vehicle.</td><td align="center" nowrap>Sub-second&nbsp;event,&nbsp;subtle&nbsp;motion&nbsp;cues.</td></tr></tbody></table></div>
 
+<div align="center"><table><thead><tr><th align="center">STATIC DUMPING</th><th align="center">DYNAMIC DUMPING</th></tr></thead><tbody><tr><td align="center"><img src="static.gif" width="380" alt="Static dumping example"></td><td align="center"><img src="dynamic.gif" width="380" alt="Dynamic dumping example"></td></tr></tbody></table></div>
+
 <p align="justify">The benchmark supports two coupled objectives: video-level detection, which determines whether an illegal dumping event occurs, and temporal localization, which estimates the event-onset timestamp in positive videos. This formulation requires models to combine global scene understanding with fine-grained temporal reasoning.</p>
 
 ---
@@ -74,8 +76,6 @@
 ### SEMANTIC ANNOTATION COMPONENTS
 
 <div align="center"><table><thead><tr><th align="center" colspan="3">SEMANTIC&nbsp;ANNOTATION&nbsp;COMPONENTS</th></tr><tr><th align="center">COMPONENT</th><th align="center">APPLIES&nbsp;TO</th><th align="center">DOMAIN&nbsp;/&nbsp;REPRESENTATION</th></tr></thead><tbody><tr><td align="center"><b>VIDEO-LEVEL&nbsp;LABEL</b></td><td align="center">ALL&nbsp;VIDEOS</td><td align="center"><code>DUMPING</code>&nbsp;/&nbsp;<code>NO&nbsp;DUMPING</code></td></tr><tr><td align="center"><b>EVENT-ONSET&nbsp;TIMESTAMP</b></td><td align="center">POSITIVE&nbsp;VIDEOS</td><td align="center">TIMESTAMP&nbsp;ON&nbsp;VIDEO&nbsp;TIMELINE</td></tr><tr><td align="center"><b>DISPOSAL&nbsp;MODALITY</b></td><td align="center">POSITIVE&nbsp;VIDEOS</td><td align="center"><code>STATIC</code>&nbsp;/&nbsp;<code>DYNAMIC</code></td></tr><tr><td align="center"><b>TIME&nbsp;OF&nbsp;DAY</b></td><td align="center">ALL&nbsp;VIDEOS</td><td align="center"><code>DAY</code>&nbsp;/&nbsp;<code>NIGHT</code></td></tr><tr><td align="center"><b>ILLUMINATION</b></td><td align="center">ALL&nbsp;VIDEOS</td><td align="center"><code>BRIGHT</code>&nbsp;/&nbsp;<code>DIM</code></td></tr></tbody></table></div>
-
-<p align="justify">Serialization note. The paper specifies the semantic content of the annotations but does not define the exact on-disk format. The serialization adopted in the public release — including field names, data types, and the sentinel value used for negative samples — is documented in the following section.</p>
 
 ---
 
