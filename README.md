@@ -10,6 +10,16 @@
 
 </div>
 
+<br/>
+
+<div align="center">
+<a href="https://drive.google.com/drive/folders/1DgXQnvK3keGP9BKB-cqpixnKaNLl2746?usp=sharing"><img src="https://img.shields.io/badge/DOWNLOAD-TRAINING_SET-1f6feb?style=for-the-badge&logo=googledrive&logoColor=white" alt="Download Training Set"></a>&nbsp;&nbsp;&nbsp;  <a href="https://drive.google.com/drive/folders/1OnA3rHn5uKAMEuHsQc11oxueTT-TQQwJ?usp=sharing"><img src="https://img.shields.io/badge/DOWNLOAD-PUBLIC_TEST_SET_ID-2ea44f?style=for-the-badge&logo=googledrive&logoColor=white" alt="Download Public Test Set ID"></a>
+</div>
+
+<br/>
+
+> **NOTE** — Each video is released together with its own JSON annotation file (see [ANNOTATION FORMAT](#annotation-format)). When using the dataset in scientific work, please cite the publications listed in [CITATION](#citation).
+
 ---
 
 ## TABLE OF CONTENTS
