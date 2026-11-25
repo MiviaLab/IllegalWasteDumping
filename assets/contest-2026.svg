@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 150" width="1200" height="150" role="img" aria-label="IWDD 2026 Contest: open the contest page for rules, dates and submission details"><title>IWDD 2026 Contest: open the contest page for rules, dates and submission details</title><defs><linearGradient id="bt" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#8b5cf6"/><stop offset="1" stop-color="#6366f1"/></linearGradient><radialGradient id="gl" cx="1" cy="0" r="1"><stop offset="0" stop-color="#a78bfa" stop-opacity=".30"/><stop offset="1" stop-color="#a78bfa" stop-opacity="0"/></radialGradient><clipPath id="c"><rect width="1200" height="150" rx="22"/></clipPath></defs><style>.s{font-family:Inter,-apple-system,'Segoe UI',Helvetica,Arial,sans-serif}.m{font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace}@media (prefers-reduced-motion:reduce){*{animation:none!important}}</style>
+<g clip-path="url(#c)"><rect width="1200" height="150" fill="#0c1626"/><circle cx="1200" cy="0" r="420" fill="url(#gl)"/></g>
+<rect x="1" y="1" width="1198" height="148" rx="21" fill="none" stroke="#a78bfa" stroke-opacity=".55" stroke-width="2"/>
+<text class="m" x="48" y="46" font-size="16" letter-spacing="3" fill="#a78bfa">FIRST EDITION</text>
+<text class="s" x="48" y="86" font-size="34" font-weight="800" fill="#e6edf3">IWDD 2026 Contest</text>
+<text class="s" x="48" y="118" font-size="19" fill="#93a4b8">Rules, dates and submission details are on the contest page.</text>
+<rect x="896" y="52" width="256" height="48" rx="24" fill="url(#bt)"/>
+<text class="s" x="1000" y="83" font-size="20" font-weight="700" text-anchor="middle" fill="#fff">Open contest page</text>
+<path d="M1112 85l12-12M1114 73h10v10" fill="none" stroke="#fff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
